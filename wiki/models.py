@@ -56,6 +56,7 @@ class Article(models.Model):
                                        blank=True, null=True)
     created_at = models.DateTimeField(default=datetime.now)
     last_update = models.DateTimeField(blank=True, null=True)
+    removed = models.BooleanField(_("Is removed?"), default=False)
 
     content_type = models.ForeignKey(ContentType, null=True)
     object_id = models.PositiveIntegerField(null=True)
