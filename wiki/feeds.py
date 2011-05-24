@@ -93,7 +93,7 @@ class AtomHistoryFeed(atom.Feed):
 
     def item_authors(self, item):
         if item.is_anonymous_change():
-            return [{'name' : _('Anonimous')},]
+            return [{'name' : _('Anonymous')},]
         return [{'name' : item.editor.username},]
 
     def item_links(self, item):
@@ -199,7 +199,7 @@ class AtomArticleHistoryFeed(atom.Feed):
 
     def item_authors(self, item):
         if item.is_anonymous_change():
-            return [{'name' : _('Anonimous')},]
+            return [{'name' : _('Anonymous')},]
         return [{'name' : item.editor.username},]
 
     def item_links(self, item):
