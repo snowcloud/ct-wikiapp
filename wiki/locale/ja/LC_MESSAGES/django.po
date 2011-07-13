@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-27 13:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: feeds.py:96 feeds.py:202
+msgid "Anonymous"
+msgstr ""
+
+#: forms.py:41
+msgid "Must be a WikiWord."
+msgstr ""
+
+#: forms.py:59
+msgid "An article with this title already exists."
+msgstr ""
+
+#: management.py:10
+msgid "Article Edited"
+msgstr ""
+
+#: management.py:11
+msgid "your article has been edited"
+msgstr ""
+
+#: management.py:13
+msgid "Article Revision Reverted"
+msgstr ""
+
+#: management.py:14
+msgid "your revision has been reverted"
+msgstr ""
+
+#: management.py:16
+msgid "Observed Article Changed"
+msgstr ""
+
+#: management.py:17
+msgid "an article you observe has changed"
+msgstr ""
+
+#: models.py:36
+msgid "Creole"
+msgstr ""
+
+#: models.py:37
+msgid "reStructuredText"
+msgstr ""
+
+#: models.py:38
+msgid "Textile"
+msgstr ""
+
+#: models.py:39
+msgid "Markdown"
+msgstr ""
+
+#: models.py:46
+msgid "Title"
+msgstr ""
+
+#: models.py:47
+msgid "Content"
+msgstr ""
+
+#: models.py:48
+msgid "Summary"
+msgstr ""
+
+#: models.py:50
+msgid "Content Markup"
+msgstr ""
+
+#: models.py:53
+msgid "Article Creator"
+msgstr ""
+
+#: models.py:55
+msgid "IP Address of the Article Creator"
+msgstr ""
+
+#: models.py:59
+msgid "Is removed?"
+msgstr ""
+
+#: models.py:68 models.py:141
+msgid "Article"
+msgstr ""
+
+#: models.py:69
+msgid "Articles"
+msgstr ""
+
+#: models.py:144
+msgid "Editor"
+msgstr ""
+
+#: models.py:146
+msgid "IP Address of the Editor"
+msgstr ""
+
+#: models.py:149
+msgid "Revision Number"
+msgstr ""
+
+#: models.py:152
+msgid "Old Title"
+msgstr ""
+
+#: models.py:153
+msgid "Article Content Markup"
+msgstr ""
+
+#: models.py:156
+msgid "Content Patch"
+msgstr ""
+
+#: models.py:158
+msgid "Editor comment"
+msgstr ""
+
+#: models.py:159
+msgid "Modified at"
+msgstr ""
+
+#: models.py:160
+msgid "Reverted Revision"
+msgstr ""
+
+#: models.py:166
+msgid "Change set"
+msgstr ""
+
+#: models.py:167
+msgid "Change sets"
+msgstr ""
+
+#: templates/feeds/history_description.html:3
+msgid "edited by user"
+msgstr ""
+
+#: templates/feeds/history_description.html:3
+msgid "at"
+msgstr ""
+
+#: templates/notification/wiki_article_edited/notice.html:2
+#, python-format
+msgid ""
+"The wiki article <a href=\"%(article_url)s\">%(article)s</a> has been edited "
+"by <a href=\"%(user_url)s\">%(user)s</a>."
+msgstr ""
+
+#: templates/notification/wiki_observed_article_changed/notice.html:1
+#, python-format
+msgid ""
+"The wiki article <a href=\"%(article_url)s\">%(observed)s</a>, that you "
+"observe, has changed."
+msgstr ""
+
+#: templates/notification/wiki_revision_reverted/notice.html:2
+#, python-format
+msgid ""
+"Your revision <a href=\"%(revision_url)s\">%(revision)s</a> on <a href=\"%"
+"(article_url)s\">%(article)s</a> has been reverted."
+msgstr ""
+
+#: templates/wiki/base.html:20
+msgid "List all articles"
+msgstr ""
+
+#: templates/wiki/changeset.html:14
+msgid "Markup:"
+msgstr ""
+
+#: templates/wiki/changeset.html:16
+msgid "Plain Text."
+msgstr ""
+
+#: templates/wiki/edit.html:5
+msgid "Editing article"
+msgstr ""
+
+#: templates/wiki/edit.html:9
+msgid "Edit"
+msgstr ""
+
+#: templates/wiki/edit.html:16
+msgid "Save"
+msgstr ""
+
+#: templates/wiki/history.html:6
+msgid "History for"
+msgstr ""
+
+#: templates/wiki/history.html:14
+msgid "Article History"
+msgstr ""
+
+#: templates/wiki/history.html:19
+msgid "At"
+msgstr ""
+
+#: templates/wiki/history.html:20
+msgid "User"
+msgstr ""
+
+#: templates/wiki/history.html:21
+msgid "Comment"
+msgstr ""
+
+#: templates/wiki/history.html:22 templates/wiki/history.html.py:51
+msgid "Revert"
+msgstr ""
+
+#: templates/wiki/history.html:41
+msgid "Current revision"
+msgstr ""
+
+#: templates/wiki/index.html:19
+msgid "Create a new article"
+msgstr ""
+
+#: templates/wiki/recentchanges.html:6
+msgid "Recent Changes"
+msgstr ""
+
+#: templates/wiki/searchbox.html:7
+msgid "Article by title"
+msgstr ""
+
+#: templates/wiki/view.html:13
+msgid "This article does not exist."
+msgstr ""
+
+#: templates/wiki/view.html:14
+msgid ">Create it now</a>?"
+msgstr ""
+
+#: templates/wiki/view.html:23
+msgid "Edit this article"
+msgstr ""
+
+#: templates/wiki/view.html:25
+msgid "Editing history"
+msgstr ""
+
+#: templates/wiki/view.html:27
+msgid "Create this article"
+msgstr ""
+
+#: templates/wiki/wiki_title.html:3
+#, python-format
+msgid ""
+"\n"
+"    <h1> Wiki for %(group_type)s <a href=\"%(group_url)s\">%(group_name)s</"
+"a> </h1>\n"
+msgstr ""
