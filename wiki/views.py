@@ -3,6 +3,7 @@
 from datetime import datetime
 
 from django.conf import settings
+from django.contrib import messages
 from django.core.cache import cache
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
@@ -96,9 +97,7 @@ class ArticleEditLock(object):
         editing this article.
         """
         if not self.is_mine(request):
-            user = request.user
-            user.message_set.create(
-                message=self.message_template%self.created_at)
+            messages.add_message(request, messages.INFO, self.message_template%self.created_at)
 
     def is_mine(self, request):
         return self.user_ip == get_real_ip(request)
@@ -274,7 +273,7 @@ def edit_article(request, title,
                     user_message = u"Your article was created successfully."
                 else:
                     user_message = u"Your article was edited successfully."
-                request.user.message_set.create(message=user_message)
+                messages.add_message(request, messages.INFO, user_message)
 
             if ((article is None) and (group_slug is not None)):
                 form.group = group
@@ -461,8 +460,7 @@ def revert_to_revision(request, title,
 
 
         if request.user.is_authenticated():
-            request.user.message_set.create(
-                message=u"The article was reverted successfully.")
+            messages.add_message(request, messages.INFO, u"The article was reverted successfully.")
 
         url = get_url('wiki_article_history', group,
                       [title], {'title': title,
