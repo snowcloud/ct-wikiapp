@@ -10,10 +10,10 @@ from django.core.urlresolvers import reverse
 from django.http import (Http404, HttpResponseRedirect,
                          HttpResponseNotAllowed, HttpResponse, HttpResponseForbidden)
 from django.shortcuts import get_object_or_404, render_to_response
-from django.views.generic.simple import redirect_to
+from django.views.generic.base import RedirectView
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
-from django.contrib.syndication.feeds import FeedDoesNotExist
+from django.contrib.syndication.views import FeedDoesNotExist
 
 from wiki.forms import ArticleForm, SearchForm
 from wiki.models import Article, ChangeSet
@@ -285,7 +285,7 @@ def edit_article(request, title,
                           {'title': new_article.title,
                            'group_slug': group_slug})
 
-            return redirect_to(request, url)
+            return HttpResponseRedirect(url)
 
     elif request.method == 'GET':
         user_ip = get_real_ip(request)
@@ -466,7 +466,7 @@ def revert_to_revision(request, title,
                       [title], {'title': title,
                                 'group_slug': group_slug})
 
-        return redirect_to(request, url)
+        return HttpResponseRedirect(url)
 
     return HttpResponseNotAllowed(['POST'])
 
@@ -502,7 +502,7 @@ def search_article(request,
                           [search_term], {'title': search_term,
                                           'group_slug': group_slug})
 
-            return redirect_to(request, url)
+            return HttpResponseRedirect(url)
 
     return HttpResponseNotAllowed(['POST'])
 
@@ -580,7 +580,7 @@ def observe_article(request, title,
                       [article.title], {'title': article.title,
                                         'group_slug': group_slug})
 
-        return redirect_to(request, url)
+        return HttpResponseRedirect(url)
 
     return HttpResponseNotAllowed(['POST'])
 
@@ -619,7 +619,7 @@ def stop_observing_article(request, title,
                       [article.title], {'title': article.title,
                                         'group_slug': group_slug})
 
-        return redirect_to(request, url)
+        return HttpResponseRedirect(url)
     return HttpResponseNotAllowed(['POST'])
 
 
