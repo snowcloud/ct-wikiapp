@@ -1,6 +1,6 @@
 {% extends 'wiki/base.html' %}
 {% load i18n %}
-
+{% load future %}
 
 {% block title %}
     {% trans "History for" %} {{ article.title }}
@@ -13,7 +13,7 @@
 
 <h2> {% trans "Article History" %} </h2>
 
-<form action="{% url wiki_revert_to_revision article.title %}" method="post">{% csrf_token %}
+<form action="{% url 'wiki_revert_to_revision' article.title %}" method="post">{% csrf_token %}
   <table>
     <tr class="tbheader">
 	  <th>{% trans "At" %}</th>
@@ -30,7 +30,7 @@
         {% if change.is_anonymous_change %}
             {{ change.editor_ip }}
         {% else %}
-            <a href="{% url wiki_article change.editor %}">{{ change.editor }}</a>
+            <a href="{% url 'wiki_article' change.editor %}">{{ change.editor }}</a>
         {% endif %}
         </td>
         <td>
@@ -52,6 +52,6 @@
 
 </form>
 
-<a href="{% url wiki_article_history_feed title=article.title,feedtype="atom" %}">Atom Feed</a>
+<a href="{% url 'wiki_article_history_feed' title=article.title,feedtype="atom" %}">Atom Feed</a>
   
 {% endblock %}

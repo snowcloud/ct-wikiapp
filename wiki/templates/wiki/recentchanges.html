@@ -1,6 +1,7 @@
 {% extends 'wiki/base.html' %}
 {% load i18n %}
 {% load pagination_tags %}
+{% load future %}
 
 {% block content %}
 <h2>{% trans "Recent Changes" %}</h2>
@@ -15,12 +16,12 @@
     <tr>
         <td>
             {% if change.old_title %} 
-                <a href="{% url wiki_changeset change.article.title,change.revision %}"> M </a>
+                <a href="{% url 'wiki_changeset' change.article.title,change.revision %}"> M </a>
             {% else %} 
                 A 
             {% endif %}
         </td>
-        <td><a href="{% url wiki_article change.article.title %}">
+        <td><a href="{% url 'wiki_article' change.article.title %}">
             {{ change.article.title }}</a>
         </td>
         <td>{{ change.modified|date:"H:i" }}</td>
